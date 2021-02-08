@@ -7,6 +7,9 @@ console.log(process.env.NODE_ENV );
 module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
+  "extra": {
+    ssl: true
+  },
   "synchronize": false,
   "entities": [
     process.env.NODE_ENV === 'local' ? process.env.TYPEORM_ENTITIES: "dist/models/**/*.js"
