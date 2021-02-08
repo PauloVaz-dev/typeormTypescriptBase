@@ -7,8 +7,11 @@ console.log(process.env.NODE_ENV );
 module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
+  "ssl": true,
   "extra": {
-    ssl: true
+    ssl: {
+      rejectUnauthorized: false,
+    },
   },
   "synchronize": false,
   "entities": [
