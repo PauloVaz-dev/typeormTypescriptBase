@@ -65,6 +65,7 @@ const create = async (req: Request, res: Response) => {
     const user = userRepo.create({
       name,
       email,
+      is_active: true,
     });
 
     await userRepo.save(user);
