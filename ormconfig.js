@@ -16,6 +16,6 @@ module.exports = {
   "migrationsDir": [
     process.env.NODE_ENV ? process.env.TYPEORM_MIGRATIONS_DIR: "dist/migrations/"
   ],
-  "entitiesDir": process.env.NODE_ENV ? process.env.TYPEORM_ENTITIES_DIR: "src/models"
+  "entitiesDir": process.env.NODE_ENV ? process.env.TYPEORM_ENTITIES_DIR: "dist/models"
   }
 }
